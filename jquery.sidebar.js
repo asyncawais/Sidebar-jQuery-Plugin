@@ -29,43 +29,40 @@
                 $(window).scroll(function () {
                  
                     window_scroll_top = $(window).scrollTop() + settings['margin'];
-
                     var left_position = $el.offset().left - $(window).scrollLeft();
-
+                    
                     if (window_scroll_top > wrapper_offset_top && (window_scroll_top + el_height) < wrapper_offset_bottom) {
                         $el.css({
-                            'position': 'fixed',
-                            'top': settings['margin'] + 'px',
-                            'left': left_position + 'px'
+                            'position'  : 'fixed',
+                            'top'       : settings['margin'] + 'px',
+                            'left'      : left_position + 'px'
                         }).addClass('fixed');
                     } else if ((window_scroll_top + el_height) > wrapper_offset_bottom) {
                         $el.css({
-                            'position': 'absolute',
-                            'top': 'auto',
-                            'bottom': '0',
-                            'left': 'auto'
+                            'position'  : 'absolute',
+                            'top'       : 'auto',
+                            'bottom'    : '0',
+                            'left'      : 'auto'
                         });
                     } else {
                         $el.css({
-                            'position': 'absolute',
-                            'top': '0',
-                            'bottom': 'auto',
-                            'left': 'auto'
+                            'position'  : 'absolute',
+                            'top'       : '0',
+                            'bottom'    : 'auto',
+                            'left'      : 'auto'
                         });
                     }
                 }).scroll();
 
                 $(window).resize(function () {
-
                     $el.css({
-                        'position': 'absolute',
-                        'top': '0',
-                        'bottom': 'auto',
-                        'left': 'auto'
+                        'position'  : 'absolute',
+                        'top'       : '0',
+                        'bottom'    : 'auto',
+                        'left'      : 'auto'
                     });
-                    
                 }).resize();
-
+                
             },
 
             'position_fix_supported': function () {
