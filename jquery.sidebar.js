@@ -10,7 +10,7 @@
 
     $.fn.fixedSidebar = function (options) {
 
-        var $el = this,
+        var $el      = this,
             settings = $.extend({
                 'wrapper' : $el.parent(),
                 'margin'  : 0
